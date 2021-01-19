@@ -78,10 +78,14 @@ class Login extends Component {
                       <CRow>
                         <CCol xs="6">
                           <CButton onClick={this.onClickLogin} color="primary" className="px-4">Login</CButton>
-                          <CButton onClick={this.onClickTest} color="primary" className="px-4">Test</CButton>
                         </CCol>
                         <CCol xs="6" className="text-right">
                           <CButton color="link" className="px-0">Forgot password?</CButton>
+                        </CCol>
+                      </CRow>
+                      <CRow className="mt-2">
+                        <CCol>
+                          <CButton variant="outline" color="primary" block onClick={this.onClickTest}>Test</CButton>
                         </CCol>
                       </CRow>
                     </CForm>
