@@ -10,6 +10,7 @@ module.exports = {
     output: {
         path: __dirname + '/dist',
         filename: 'bundle.js',
+        chunkFilename: 'static/js/[name].chunk.js'
     },
     module: {
         rules: [
@@ -42,17 +43,17 @@ module.exports = {
             {
                 test: /\.(png|jpg|woff|woff2|eot|ttf|svg|gif|otf)$/,
                 exclude: /node_modules/,
-                loader: 'url-loader',
+                loader: 'file-loader',
                 options: {
                     limit: 1024,
                     name: '[name].[ext]',
                     publicPath: './dist/',
-                    outputPath: './dist/',
-                    esModule: false
+                    outputPath: './dist/'
                 }
             }
         ]
     },
+    devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
             template: 'public/index.html',

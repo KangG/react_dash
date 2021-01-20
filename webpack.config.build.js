@@ -10,6 +10,7 @@ module.exports = {
     output: {
         path: __dirname + '/dist',
         filename: 'bundle.js',
+        chunkFilename: 'static/js/[name].chunk.js'
     },
     module: {
         rules: [

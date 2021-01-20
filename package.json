@@ -61,7 +61,7 @@
   },
   "scripts": {
     "start": "webpack serve --mode development --open --config webpack.config.local.js",
-    "dev": "webpack --mode development --config webpack.config.local.js",
+    "dev": "webpack --mode development --config webpack.config.dev.js",
     "build": "webpack --mode production --config webpack.config.build.js",
     "test:cov": "npm test -- --coverage --watchAll=false",
     "test:debug": "react-scripts --inspect-brk test --runInBand",

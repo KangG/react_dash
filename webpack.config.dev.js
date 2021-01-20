@@ -10,6 +10,7 @@ module.exports = {
     output: {
         path: __dirname + '/dist',
         filename: 'bundle.js',
+        chunkFilename: 'static/js/[name].chunk.js'
     },
     module: {
         rules: [
@@ -47,12 +48,12 @@ module.exports = {
                     limit: 1024,
                     name: '[name].[ext]',
                     publicPath: './dist/',
-                    outputPath: './dist/',
-                    esModule: false
+                    outputPath: './dist/'
                 }
             }
         ]
     },
+    devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
             template: 'public/index.html',
