@@ -59,7 +59,7 @@ module.exports = {
             favicon: 'public/favicon.ico'
         }),
         new webpack.DefinePlugin({
-            WEBPACK_CONFIG_API_URL: JSON.stringify("http://localhost:5555")
+            WEBPACK_CONFIG_API_URL: JSON.stringify("http://api.rtrod.org:5555")
         })
     ],
     devServer: {

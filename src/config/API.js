@@ -1,10 +1,6 @@
 import axios from "axios";
 
-// TODO: 환경변수 설정 후 URL 변경
-// WEBPACK OR ENV 사용
-// const API_URL = `${WEBPACK_CONFIG_API_URL}`;
-// const API_URL = process.env.REACT_APP_API_URL;
-const API_URL = "http://localhost:5555";
+const API_URL = `${WEBPACK_CONFIG_API_URL}`;
 const isLocal = API_URL.indexOf("localhost") >= 0 ? true : false;
 
 const request = axios.create({
